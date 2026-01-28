@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="🛡️ 맞춤 보험 솔루션">
-    <meta property="og:description" content="클릭하여 나에게 필요한 보험 플랜을 확인하세요.">
+    <meta property="og:title" content="🛡️ JEHEO 맞춤 보험 솔루션">
+    <meta property="og:description" content="나에게 딱 맞는 보험 플랜을 선택하고 상담받으세요.">
     <meta property="og:image" content="https://JEHEO.github.io/peach.png">
     <meta property="og:url" content="https://JEHEO.github.io/">
 
@@ -16,116 +16,103 @@
 <body>
 
     <header>
-        <div class="logo">🛡️ JEHEO 보험 가이드</div>
+        <div class="logo">🛡️ JEHEO 보험 솔루션</div>
     </header>
 
     <section class="hero">
-        <h1>나에게 꼭 필요한 플랜은?</h1>
-        <p>카테고리를 클릭하여 상세 보장 내용을 확인하세요.</p>
+        <h1>나에게 맞는 플랜을 선택하세요</h1>
+        <p>상품을 선택하신 후 하단 버튼으로 상담 신청이 가능합니다.</p>
     </section>
 
     <main class="container">
         <div class="accordion-item">
             <button class="accordion-header" onclick="toggleAccordion('cat1')">
-                💰 저축 + 🏥 질병 보장 (밸런스핏/놀라종) <span>▼</span>
+                💰 저축 + 🏥 질병 보장 상품 <span>▼</span>
             </button>
             <div id="cat1" class="accordion-content">
-                <div class="card highlight">
-                    <h3>밸런스핏 (종신, 3대 질병)</h3>
-                    <p><strong>암, 뇌질환, 심장질환 집중 보장</strong></p>
-                    <ul>
-                        <li>사망보장 / 100%이상 환급 (주계약기준)</li>
-                        <li>3대질병 치료비(년단위 10회보장)</li>
-                        <li>납입중 3대질병시 회사에서 대신납부</li>
-                        <li>연금 받는중 3대질병시 연금액 3배</li>
-                    </ul>
+                <div class="product-item">
+                    <label>
+                        <input type="radio" name="product" value="밸런스핏"> <strong>밸런스핏 (종신/3대질병)</strong>
+                    </label>
+                    <p class="summary">3대질병(암,뇌,심장) 10회 보장 / 납입면제 / 연금 3배 증액</p>
                 </div>
-                <div class="card">
-                    <h3>놀라종 (종신, 6대 질병)</h3>
-                    <p><strong>종합보험 형식 가입</strong></p>
-                    <ul>
-                        <li>6대질병 진단시 80% 선지급(1회) & 납입면제</li>
-                        <li>완납 후 100% 이상 환급</li>
-                        <li>완납후 6대 질병 미발생 시 사망보험금 증액</li>
-                    </ul>
+                <div class="product-item">
+                    <label>
+                        <input type="radio" name="product" value="놀라종"> <strong>놀라종 (종신/6대질병)</strong>
+                    </label>
+                    <p class="summary">6대질병 80% 선지급 / 완납 후 100% 환급 / 종합보험 형식</p>
                 </div>
             </div>
         </div>
 
         <div class="accordion-item">
             <button class="accordion-header" onclick="toggleAccordion('cat2')">
-                📈 단기 목돈 & 자녀 증여 (드림Up/세븐Plus) <span>▼</span>
+                📈 저축 및 목돈 마련 <span>▼</span>
             </button>
             <div id="cat2" class="accordion-content">
-                <div class="card">
-                    <h3>드림Up (단기납 종신)</h3>
-                    <ul>
-                        <li>7년납 3년거치(10년) 117.6% 확정 (비과세)</li>
-                        <li>단기간 목돈마련, 자녀증여 최적</li>
-                    </ul>
+                <div class="product-item">
+                    <label>
+                        <input type="radio" name="product" value="드림Up"> <strong>드림Up (단기납 종신)</strong>
+                    </label>
+                    <p class="summary">10년 117.6% 확정 환급 / 비과세 목돈 / 자녀 증여용</p>
                 </div>
-                <div class="card">
-                    <h3>세븐Plus</h3>
-                    <ul>
-                        <li>가입 1년후부터 사망보험금 매년 20% 체증</li>
-                        <li>7년 환급률 100% / 유지보너스 발생</li>
-                        <li>종신, 장기요양, 연금 등으로 전환 가능</li>
-                    </ul>
+                <div class="product-item">
+                    <label>
+                        <input type="radio" name="product" value="세븐Plus"> <strong>세븐Plus</strong>
+                    </label>
+                    <p class="summary">사망보험금 체증 / 7년 환급 100% / 장기요양 전환 가능</p>
                 </div>
             </div>
         </div>
 
         <div class="accordion-item">
             <button class="accordion-header" onclick="toggleAccordion('cat3')">
-                🎯 특화 보장 (상속/연금/투자) <span>▼</span>
+                🎯 특화 보장 및 투자 <span>▼</span>
             </button>
             <div id="cat3" class="accordion-content">
-                <div class="card">
-                    <h3>든든종 (상속세, 장례비)</h3>
-                    <p>확정금리형으로 상속세 재원 및 장례비 페이백</p>
-                </div>
-                <div class="card">
-                    <h3>원더라이프 (연금)</h3>
-                    <p>연 확정금리 7% (20년 이내), 이후 5%</p>
-                </div>
-                <div class="card">
-                    <h3>변액보험 (투자)</h3>
-                    <p>미국주식 및 대안투자 (금, 달러 등), 이자소득 비과세</p>
-                </div>
+                <div class="product-item"><label><input type="radio" name="product" value="든든종"> <strong>든든종 (상속/장례)</strong></label></div>
+                <div class="product-item"><label><input type="radio" name="product" value="원더라이프"> <strong>원더라이프 (연금)</strong></label></div>
+                <div class="product-item"><label><input type="radio" name="product" value="변액보험"> <strong>변액보험 (투자)</strong></label></div>
+                <div class="product-item"><label><input type="radio" name="product" value="건강보험"> <strong>통합건강보험 (보장형)</strong></label></div>
             </div>
         </div>
 
-        <section class="contact-fixed">
-            <input type="text" id="userName" placeholder="성함 입력" class="input-name">
-            <div class="btn-group">
-                <a href="tel:01098767580" class="btn call">전화</a>
-                <button onclick="sendSMS()" class="btn sms">문자</button>
-                <a href="https://open.kakao.com/o/snxb2Gdi" target="_blank" class="btn kakao">카톡</a>
+        <section class="contact-area">
+            <div class="contact-box">
+                <h3>상담 신청하기</h3>
+                <p>상품 선택 후 이름을 입력해 주세요.</p>
+                <input type="text" id="userName" placeholder="성함을 입력해주세요" class="input-name">
+                <div class="btn-group">
+                    <a href="tel:01098767580" class="btn call">📞 전화 상담</a>
+                    <button onclick="sendSMS()" class="btn sms">💬 문자 상담 예약</button>
+                    <a href="https://open.kakao.com/o/snxb2Gdi" target="_blank" class="btn kakao">💛 카톡 1:1 상담</a>
+                </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2026 JEHEO 보험 솔루션. All rights reserved.</p>
+    </footer>
+
     <script>
-        // 아코디언 열고 닫기 함수
         function toggleAccordion(id) {
             const content = document.getElementById(id);
-            const allContents = document.querySelectorAll('.accordion-content');
-            
-            // 하나만 열리게 하고 싶을 때 다른 것들을 닫는 로직 (선택사항)
-            // allContents.forEach(c => { if(c.id !== id) c.style.display = 'none'; });
-
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+            content.style.display = (content.style.display === "block") ? "none" : "block";
         }
 
         function sendSMS() {
             const name = document.getElementById('userName').value;
+            const selectedProduct = document.querySelector('input[name="product"]:checked');
             const phoneNumber = "01098767580";
-            let message = "보험 상담 신청합니다.";
-            if(name) message = `안녕하세요, ${name}입니다. 보험 상담 신청합니다.`;
+            
+            let productName = selectedProduct ? selectedProduct.value : "보험 상품";
+            let message = `안녕하세요, [${productName}] 상담 신청합니다.`;
+            
+            if(name.trim() !== "") {
+                message = `안녕하세요, ${name}입니다. [${productName}] 상담 신청합니다.`;
+            }
+            
             location.href = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
         }
     </script>
