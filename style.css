@@ -1,41 +1,48 @@
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
-body { background: #f4f7f9; color: #333; line-height: 1.6; }
+body { background: #f0f3f5; color: #333; line-height: 1.6; }
 
 .container { max-width: 600px; margin: 0 auto; padding: 20px; }
 
-header { background: #fff; padding: 20px; text-align: center; border-bottom: 2px solid #0056b3; }
-.logo { font-weight: bold; font-size: 1.2rem; color: #0056b3; }
+header { background: #fff; padding: 20px; text-align: center; border-bottom: 2px solid #004a99; }
+.logo { font-weight: bold; font-size: 1.1rem; color: #004a99; letter-spacing: -0.5px; }
 
 .hero { padding: 40px 20px; text-align: center; background: #fff; border-bottom: 1px solid #eee; }
-.hero h1 { font-size: 1.5rem; margin-bottom: 10px; }
+.hero h1 { font-size: 1.4rem; color: #111; margin-bottom: 8px; }
+.hero p { font-size: 0.9rem; color: #777; }
 
 /* 아코디언 */
-.accordion-item { background: #fff; margin-bottom: 12px; border-radius: 10px; border: 1px solid #ddd; overflow: hidden; }
+.accordion-item { background: #fff; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; overflow: hidden; }
 .accordion-header {
     width: 100%; padding: 18px; text-align: left; background: #fff; border: none;
-    font-size: 1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between;
+    font-size: 0.95rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; color: #444;
 }
-.accordion-content { display: none; padding: 10px 18px; background: #fafafa; border-top: 1px solid #eee; }
+.accordion-content { display: none; padding: 5px 15px 15px; background: #fafafa; }
 
-/* 상품 선택 항목 */
-.product-item { padding: 12px 0; border-bottom: 1px solid #eee; }
-.product-item:last-child { border-bottom: none; }
-.product-item label { display: block; cursor: pointer; font-size: 1rem; }
-.product-item input[type="radio"] { margin-right: 10px; transform: scale(1.2); }
-.summary { font-size: 0.85rem; color: #666; margin-top: 5px; padding-left: 25px; }
+/* 상품 카드 형식 설명 */
+.info-card { background: white; padding: 12px; border-radius: 6px; margin-top: 10px; border: 1px solid #eee; }
+.info-card h4 { font-size: 0.95rem; color: #004a99; margin-bottom: 4px; }
+.info-card p { font-size: 0.85rem; color: #666; }
 
-/* 하단 상담 신청 */
-.contact-area { margin-top: 40px; }
-.contact-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-.input-name { width: 100%; max-width: 300px; padding: 12px; margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; text-align: center; }
+/* 상담 신청 구역 */
+.contact-area { margin-top: 30px; }
+.contact-box { background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); text-align: center; }
+.contact-box h3 { margin-bottom: 20px; font-size: 1.2rem; }
 
-.btn-group { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto; }
+/* 입력 필드 (이름 & 셀렉트박스) */
+.input-field {
+    width: 100%; max-width: 320px; padding: 12px; margin-bottom: 12px;
+    border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; background: #fff;
+}
+
+.btn-group { display: flex; flex-direction: column; gap: 10px; max-width: 320px; margin: 10px auto 0; }
 .btn {
-    padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; 
-    border: none; cursor: pointer; font-size: 1rem; color: white;
+    padding: 14px; border-radius: 6px; font-weight: bold; text-decoration: none; 
+    border: none; cursor: pointer; font-size: 1rem; color: white; transition: 0.2s;
 }
+.btn:active { opacity: 0.8; transform: translateY(1px); }
+
 .call { background: #28a745; }
 .sms { background: #007bff; }
 .kakao { background: #fee500; color: #3c1e1e; }
 
-footer { padding: 40px 0; text-align: center; font-size: 0.8rem; color: #999; }
+footer { padding: 30px 0; text-align: center; font-size: 0.75rem; color: #aaa; }
