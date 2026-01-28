@@ -76,4 +76,15 @@ nav ul { display: flex; gap: 20px; }
     cursor: pointer;
     border: none;
 }
+.contact-btn {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.call { background-color: #28a745; } /* 전화는 초록색 */
+.sms { background-color: #ffc107; color: #333; } /* 문자는 노란색 */
 footer { text-align: center; padding: 20px; background: #333; color: white; }
