@@ -1,59 +1,50 @@
 :root {
-    --primary-color: #004a99;
-    --secondary-color: #f8f9fa;
-    --accent-color: #e6f0ff;
-    --text-dark: #333;
-    --text-light: #666;
+    --main-blue: #0056b3;
+    --light-bg: #f8f9fa;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
-body { background-color: #f4f7f9; color: var(--text-dark); }
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
+body { background: #eee; padding-bottom: 120px; }
 
-.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+.container { max-width: 600px; margin: 0 auto; padding: 15px; }
 
-header { background: #fff; padding: 15px 5%; text-align: center; border-bottom: 2px solid var(--accent-color); }
-.logo { font-weight: bold; font-size: 1.2rem; color: var(--primary-color); }
+header { background: #fff; padding: 15px; text-align: center; font-weight: bold; color: var(--main-blue); border-bottom: 1px solid #ddd; }
+.hero { background: white; padding: 30px 20px; text-align: center; }
+.hero h1 { font-size: 1.4rem; color: #333; }
+.hero p { font-size: 0.9rem; color: #666; margin-top: 5px; }
 
-.hero { background: var(--primary-color); color: white; padding: 50px 20px; text-align: center; }
-.hero h1 { font-size: 1.8rem; margin-bottom: 10px; }
-
-.category { margin-top: 40px; }
-.category-title { border-left: 5px solid var(--primary-color); padding-left: 10px; margin-bottom: 20px; font-size: 1.3rem; }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-
-/* 카드 스타일 */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    position: relative;
-    border: 1px solid #eee;
+/* 아코디언 스타일 */
+.accordion-item { background: white; margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+.accordion-header {
+    width: 100%; padding: 18px; text-align: left; background: white;
+    border: none; font-size: 1rem; font-weight: bold; cursor: pointer;
+    display: flex; justify-content: space-between; color: #444;
 }
-.highlight-card { border: 2px solid var(--primary-color); }
-.badge {
-    position: absolute; top: 10px; right: 10px;
-    background: #ff4d4d; color: white; padding: 4px 8px;
-    border-radius: 4px; font-size: 0.7rem; font-weight: bold;
+.accordion-header:active { background: #f0f0f0; }
+
+.accordion-content { display: none; padding: 15px; background: var(--light-bg); border-top: 1px solid #eee; }
+
+/* 상품 카드 */
+.card { background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #ccc; }
+.card.highlight { border-left-color: var(--main-blue); }
+.card h3 { font-size: 1.1rem; color: var(--main-blue); margin-bottom: 8px; }
+.card ul { list-style: none; font-size: 0.9rem; color: #555; }
+.card li { margin-bottom: 4px; padding-left: 12px; position: relative; }
+.card li::before { content: "•"; position: absolute; left: 0; color: var(--main-blue); }
+
+/* 하단 고정 상담창 */
+.contact-fixed {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 600px; background: white;
+    padding: 15px; box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    display: flex; flex-direction: column; gap: 10px; z-index: 1000;
 }
-.card h3 { color: var(--primary-color); margin-bottom: 10px; }
-.purpose { font-weight: bold; font-size: 0.9rem; color: #d9534f; margin-bottom: 10px; }
-.features { padding-left: 20px; font-size: 0.9rem; color: var(--text-light); }
-.features li { margin-bottom: 5px; }
-
-/* 상담 섹션 */
-.contact-area { margin-top: 50px; text-align: center; }
-.contact-box { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.input-name { width: 100%; max-width: 300px; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; }
-
-.btn-group { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto; }
+.input-name { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
+.btn-group { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 8px; }
 .btn {
-    text-decoration: none; padding: 15px; border-radius: 8px; font-weight: bold;
-    border: none; cursor: pointer; font-size: 1rem; color: white; display: block;
+    padding: 12px; border-radius: 5px; text-align: center; font-weight: bold;
+    text-decoration: none; font-size: 0.9rem; color: white; border: none; cursor: pointer;
 }
 .call { background: #28a745; }
 .sms { background: #007bff; }
 .kakao { background: #fee500; color: #3c1e1e; }
-
-footer { padding: 40px 0; text-align: center; font-size: 0.8rem; color: #999; }
