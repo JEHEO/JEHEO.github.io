@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="🛡️ JEHEO 맞춤 보험 솔루션">
-    <meta property="og:description" content="나에게 딱 맞는 보험 플랜을 선택하고 상담받으세요.">
+    <meta property="og:title" content="🛡️ 맞춤형 보험 솔루션 가이드">
+    <meta property="og:description" content="저축부터 보장까지, 나에게 꼭 맞는 보험 플랜을 확인하세요.">
     <meta property="og:image" content="https://JEHEO.github.io/peach.png">
     <meta property="og:url" content="https://JEHEO.github.io/">
 
-    <title>안심 보험 솔루션</title>
+    <title>맞춤 보험 솔루션</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">🛡️ JEHEO 보험 솔루션</div>
+        <div class="logo">🛡️ 보험 솔루션 전문가</div>
     </header>
 
     <section class="hero">
-        <h1>나에게 맞는 플랜을 선택하세요</h1>
-        <p>상품을 선택하신 후 하단 버튼으로 상담 신청이 가능합니다.</p>
+        <h1>나에게 필요한 플랜 찾기</h1>
+        <p>상세 내용을 확인하신 후 하단에서 상담을 신청해 주세요.</p>
     </section>
 
     <main class="container">
@@ -30,17 +30,13 @@
                 💰 저축 + 🏥 질병 보장 상품 <span>▼</span>
             </button>
             <div id="cat1" class="accordion-content">
-                <div class="product-item">
-                    <label>
-                        <input type="radio" name="product" value="밸런스핏"> <strong>밸런스핏 (종신/3대질병)</strong>
-                    </label>
-                    <p class="summary">3대질병(암,뇌,심장) 10회 보장 / 납입면제 / 연금 3배 증액</p>
+                <div class="info-card">
+                    <h4>밸런스핏 (종신/3대질병)</h4>
+                    <p>암·뇌·심장질환 10회 보장, 100% 환급, 연금 증액 혜택</p>
                 </div>
-                <div class="product-item">
-                    <label>
-                        <input type="radio" name="product" value="놀라종"> <strong>놀라종 (종신/6대질병)</strong>
-                    </label>
-                    <p class="summary">6대질병 80% 선지급 / 완납 후 100% 환급 / 종합보험 형식</p>
+                <div class="info-card">
+                    <h4>놀라종 (종신/6대질병)</h4>
+                    <p>6대질병 진단 시 80% 선지급, 완납 후 100% 이상 환급</p>
                 </div>
             </div>
         </div>
@@ -50,17 +46,13 @@
                 📈 저축 및 목돈 마련 <span>▼</span>
             </button>
             <div id="cat2" class="accordion-content">
-                <div class="product-item">
-                    <label>
-                        <input type="radio" name="product" value="드림Up"> <strong>드림Up (단기납 종신)</strong>
-                    </label>
-                    <p class="summary">10년 117.6% 확정 환급 / 비과세 목돈 / 자녀 증여용</p>
+                <div class="info-card">
+                    <h4>드림Up (단기납 종신)</h4>
+                    <p>10년 117.6% 확정 환급, 비과세 목돈 마련 및 자녀 증여</p>
                 </div>
-                <div class="product-item">
-                    <label>
-                        <input type="radio" name="product" value="세븐Plus"> <strong>세븐Plus</strong>
-                    </label>
-                    <p class="summary">사망보험금 체증 / 7년 환급 100% / 장기요양 전환 가능</p>
+                <div class="info-card">
+                    <h4>세븐Plus</h4>
+                    <p>사망보험금 체증형, 7년 환급 100%, 다양한 계약 전환</p>
                 </div>
             </div>
         </div>
@@ -70,20 +62,28 @@
                 🎯 특화 보장 및 투자 <span>▼</span>
             </button>
             <div id="cat3" class="accordion-content">
-                <div class="product-item"><label><input type="radio" name="product" value="든든종"> <strong>든든종 (상속/장례)</strong></label></div>
-                <div class="product-item"><label><input type="radio" name="product" value="원더라이프"> <strong>원더라이프 (연금)</strong></label></div>
-                <div class="product-item"><label><input type="radio" name="product" value="변액보험"> <strong>변액보험 (투자)</strong></label></div>
-                <div class="product-item"><label><input type="radio" name="product" value="건강보험"> <strong>통합건강보험 (보장형)</strong></label></div>
+                <div class="info-card"><p><strong>든든종:</strong> 상속세 재원 마련 및 장례비 페이백</p></div>
+                <div class="info-card"><p><strong>원더라이프:</strong> 연 확정금리 7% 노후 연금 상품</p></div>
+                <div class="info-card"><p><strong>변액보험:</strong> 미국주식/인덱스 투자 기반 비과세 상품</p></div>
             </div>
         </div>
 
         <section class="contact-area">
             <div class="contact-box">
-                <h3>상담 신청하기</h3>
-                <p>상품 선택 후 이름을 입력해 주세요.</p>
-                <input type="text" id="userName" placeholder="성함을 입력해주세요" class="input-name">
+                <h3>맞춤 상담 신청</h3>
+                
+                <input type="text" id="userName" placeholder="성함을 입력해주세요" class="input-field">
+                
+                <select id="insuranceType" class="input-field">
+                    <option value="">관심 있는 보험 종류 선택</option>
+                    <option value="저축 보험">💰 저축 보험</option>
+                    <option value="질병/보장 보험">🏥 질병/보장 보험</option>
+                    <option value="환급형 보험">🔄 환급형 보험</option>
+                    <option value="연금/투자 보험">📈 연금/투자 보험</option>
+                </select>
+
                 <div class="btn-group">
-                    <a href="tel:01098767580" class="btn call">📞 전화 상담</a>
+                    <a href="tel:01098767580" class="btn call">📞 전화 상담 연결</a>
                     <button onclick="sendSMS()" class="btn sms">💬 문자 상담 예약</button>
                     <a href="https://open.kakao.com/o/snxb2Gdi" target="_blank" class="btn kakao">💛 카톡 1:1 상담</a>
                 </div>
@@ -92,7 +92,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 JEHEO 보험 솔루션. All rights reserved.</p>
+        <p>&copy; 2026 보험 솔루션 센터. All rights reserved.</p>
     </footer>
 
     <script>
@@ -103,14 +103,17 @@
 
         function sendSMS() {
             const name = document.getElementById('userName').value;
-            const selectedProduct = document.querySelector('input[name="product"]:checked');
+            const type = document.getElementById('insuranceType').value;
             const phoneNumber = "01098767580";
             
-            let productName = selectedProduct ? selectedProduct.value : "보험 상품";
-            let message = `안녕하세요, [${productName}] 상담 신청합니다.`;
+            let message = "보험 상담 신청합니다.";
             
-            if(name.trim() !== "") {
-                message = `안녕하세요, ${name}입니다. [${productName}] 상담 신청합니다.`;
+            if(name && type) {
+                message = `안녕하세요, ${name}입니다. [${type}] 상담 신청합니다.`;
+            } else if(name) {
+                message = `안녕하세요, ${name}입니다. 보험 상담 신청합니다.`;
+            } else if(type) {
+                message = `[${type}] 상담 신청합니다.`;
             }
             
             location.href = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
