@@ -5,68 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="🛡️ 안심보험 맞춤 상담">
-    <meta property="og:description" content="전화, 문자, 카톡으로 간편하게 상담받으세요. 당신의 내일을 지킵니다.">
+    <meta property="og:title" content="🛡️ 맞춤형 보험 솔루션">
+    <meta property="og:description" content="저축부터 질병 보장까지, 당신에게 딱 맞는 플랜을 확인하세요.">
     <meta property="og:image" content="https://JEHEO.github.io/peach.png">
     <meta property="og:url" content="https://JEHEO.github.io/">
 
-    <title>안심 보험 맞춤 상담</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>안심 보험 솔루션</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">🛡️ 안심보험</div>
-        </nav>
+        <div class="logo">🛡️ 안심보험 전문가</div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <h1>당신의 내일을 지키는<br>가장 든든한 약속</h1>
-            <p>전화, 문자, 카톡으로 간편하게 상담받으세요.</p>
+            <h1>당신의 자산과 건강을<br>동시에 지키는 전략</h1>
+            <p>목돈 마련부터 질병 보장까지, 최적의 상품을 제안합니다.</p>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="form-box">
-            <h2>간편 상담 신청</h2>
-            <p>성함을 입력하시면 더 빠른 상담이 가능합니다.</p>
-            
-            <input type="text" id="userName" placeholder="성함을 입력해주세요" class="input-field">
+    <main class="container">
+        <section class="category">
+            <h2 class="category-title">💰 저축 + 🏥 질병 보장</h2>
+            <div class="grid">
+                <div class="card highlight-card">
+                    <div class="badge">추천</div>
+                    <h3>밸런스핏 (종신, 3대 질병)</h3>
+                    <p class="purpose">목적: 비과세 목돈 저축 + 의료비 통장</p>
+                    <ul class="features">
+                        <li>사망보장 & 100% 이상 환급</li>
+                        <li>3대 질병 치료비 (연 단위 10회 보장)</li>
+                        <li>암, 뇌혈관, 허혈심장질환 집중 보장</li>
+                        <li>납입 중 질병 시 회사 대납 서비스</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>놀라종 (종신, 6대 질병)</h3>
+                    <p class="purpose">목적: 환급형 종합보험</p>
+                    <ul class="features">
+                        <li>6대 질병 진단 시 80% 선지급</li>
+                        <li>납입 완료 후 100% 이상 환급</li>
+                        <li>암, 뇌출혈, 급성심근경색 등 보장</li>
+                        <li>완납 후 보장/사망보험금 분리 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <a href="tel:01098767580" class="contact-btn call">
-                📞 전화로 바로 상담
-            </a>
+        <section class="category">
+            <h2 class="category-title">📈 저축 & 목돈 마련</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>드림Up (단기납 종신)</h3>
+                    <p class="purpose">목적: 단기 목돈, 자녀 증여, 연금 전환</p>
+                    <ul class="features">
+                        <li>7년 납입 + 3년 거치 = 10년 117.6% 환급</li>
+                        <li>비과세 혜택 & 17.6% 확정이자</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>세븐Plus</h3>
+                    <p class="purpose">목적: 자산 체증 및 연금 전환</p>
+                    <ul class="features">
+                        <li>사망보험금 매년 20%씩 최대 700% 체증</li>
+                        <li>7년 시점 환급률 100% 달성</li>
+                        <li>장기요양급여 및 연금 전환 기능</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <button onclick="sendSMS()" class="contact-btn sms">
-                💬 문자로 상담 예약
-            </button>
+        <section class="category">
+            <h2 class="category-title">⚙️ 특화 보장 및 투자</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>든든종 (상속/장례)</h3>
+                    <p>상속세 재원 마련 및 장례비 페이백 시스템</p>
+                </div>
+                <div class="card">
+                    <h3>원더라이프 (연금)</h3>
+                    <p>연 확정금리 7% (20년 이내), 노후 자금 최적화</p>
+                </div>
+                <div class="card">
+                    <h3>변액보험 (투자)</h3>
+                    <p>미국주식/인덱스 투자, 이자 및 양도소득세 비과세</p>
+                </div>
+            </div>
+        </section>
 
-            <a href="https://open.kakao.com/o/snxb2Gdi" target="_blank" class="contact-btn kakao">
-                💛 카카오톡 1:1 상담
-            </a>
-        </div>
-    </section>
+        <section id="contact" class="contact-area">
+            <div class="contact-box">
+                <h3>맞춤 플랜 상담하기</h3>
+                <input type="text" id="userName" placeholder="성함을 입력해주세요" class="input-name">
+                <div class="btn-group">
+                    <a href="tel:01098767580" class="btn call">📞 전화 상담 연결</a>
+                    <button onclick="sendSMS()" class="btn sms">💬 문자 상담 예약</button>
+                    <a href="https://open.kakao.com/o/snxb2Gdi" target="_blank" class="btn kakao">💛 카톡 1:1 상담</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 안심보험 서비스. All rights reserved.</p>
+        <p>&copy; 2026 JEHEO 보험 솔루션. All rights reserved.</p>
     </footer>
 
     <script>
         function sendSMS() {
             const name = document.getElementById('userName').value;
             const phoneNumber = "01098767580";
-            
-            let message = "보험 상담 신청합니다. 연락 부탁드립니다.";
+            let message = "보험 상품 상담 신청합니다. 연락 부탁드립니다.";
             if(name.trim() !== "") {
-                message = `안녕하세요, ${name}입니다. 보험 상담 신청합니다.`;
+                message = `안녕하세요, ${name}입니다. 보험 상품 맞춤 상담 신청합니다.`;
             }
-
-            // 기기별 호환성을 위해 encodeURIComponent 사용
-            const smsUrl = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
-            location.href = smsUrl;
+            location.href = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
         }
     </script>
 </body>
