@@ -30,6 +30,9 @@ body {
 .tip {
 	font-size: 0.8rem;
 	color: #013469;
+	background-color: #eee;
+	padding: 5px;
+	border-radius: 5px;
 }
 .hero {
 	padding: 20px 5px;
