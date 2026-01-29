@@ -27,6 +27,10 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 }
+.tip {
+	font-size: 0.8rem;
+	color: #013469;
+}
 .hero {
 	padding: 20px 5px;
 	text-align: center;
