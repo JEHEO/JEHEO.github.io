@@ -1,48 +1,298 @@
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', -apple-system, sans-serif; }
-body { background: #f5f7fa; color: #333; line-height: 1.6; }
+@font-face {
+	font-family: "YeogiOttaeJalnan";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+		format("woff");
+	font-weight: normal;
+	font-display: swap;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Pretendard", sans-serif;
+}
+body {
+	background: #eff3fa;
+	color: #333;
+	line-height: 1.6;
+}
 
-.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+.container {
+	max-width: 500px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 20px 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.hero {
+	padding: 20px 5px;
+	text-align: center;
+}
+.hero h1 {
+	font-size: 1.6rem;
+	margin-bottom: 8px;
+	font-family: "YeogiOttaeJalnan";
+	color: #444;
+}
+.hero p {
+	font-size: 0.9rem;
+	color: #777;
+}
 
-header { background: #fff; padding: 18px; text-align: center; border-bottom: 2px solid #004a99; position: sticky; top: 0; z-index: 100; }
-.logo { font-weight: bold; font-size: 1.1rem; color: #004a99; }
+/* 메인 메뉴 */
+#contentArea {
+	height: 1px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	padding-bottom: 30px;
+}
+.menu-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5px;
+}
+.menu-btn {
+	background: #fff;
+	border: 1.5px solid #cbdef1;
+	color: #425d96;
+	padding: 30px 15px;
+	font-family: "YeogiOttaeJalnan";
+	font-size: 1rem;
+	cursor: pointer;
+	transition: 0.2s;
+	box-shadow: 0 0 5px 5px rgba(64, 98, 190, 0.05);
+}
 
-.hero { padding: 35px 20px; text-align: center; background: #fff; border-bottom: 1px solid #eee; }
-.hero h1 { font-size: 1.4rem; color: #111; margin-bottom: 8px; }
+/* 네비게이션 */
+.nav-bar {
+	display: flex;
+	/* gap: 8px; */
+	margin-bottom: 20px;
+}
+.nav-home {
+	background: rgb(177, 177, 177);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.nav-quick {
+	display: flex;
+	flex: 1;
+	gap: 4px;
+	/* background: rgba(210, 223, 243, 0.5); */
+	padding: 4px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.nav-quick button {
+	flex: 1;
+	border: none;
+	background: transparent;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: rgb(192, 192, 192);
+	cursor: pointer;
+	transition: 0.3s; /* 부드러운 전환 효과 */
+}
+.nav-quick button.active {
+	color: #013469;
+	font-weight: bold;
+}
 
-/* 아코디언 */
-.accordion-item { background: #fff; margin-bottom: 12px; border-radius: 12px; border: 1px solid #e1e4e8; overflow: hidden; }
+/* 아코디언 및 상품 내용 */
+.accordion-item {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
 .accordion-header {
-    width: 100%; padding: 18px 20px; text-align: left; background: #fff; border: none;
-    font-size: 1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; color: #444;
+	width: 100%;
+	padding: 20px;
+	text-align: left;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #f0f0f0;
 }
-.accordion-content { display: none; padding: 0 15px 15px; background: #fafafa; }
-
-/* 상품 상세 카드 */
-.product-detail-card {
-    background: #fff; border: 1px solid #eee; border-radius: 10px;
-    padding: 18px; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+.header-main {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5px;
+	padding-right: 20px;
 }
-.p-name { color: #004a99; font-size: 1.1rem; margin-bottom: 5px; }
-.p-tagline { font-size: 0.9rem; color: #d9534f; font-weight: bold; margin-bottom: 12px; line-height: 1.4; }
+.prod-name {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #666;
+	font-family: "YeogiOttaeJalnan";
+}
 
-.p-body ul { list-style: none; padding: 0; }
-.p-body li { font-size: 0.88rem; color: #555; margin-bottom: 8px; position: relative; padding-left: 18px; line-height: 1.5; }
-.p-body li::before { content: "•"; position: absolute; left: 0; color: #004a99; font-weight: bold; }
-.p-body strong { color: #333; }
+/* 환급률 등 태그라인 스타일 */
+.p-tagline-inline {
+	font-size: 0.85rem;
+	color: #d9534f;
+	font-weight: bold;
+}
+/* 요약 설명 스타일 (접혀있을 때 노출) */
+.p-summary-inline {
+	font-size: 0.85rem;
+	color: #777;
+	line-height: 1.4;
+	margin: 0;
+	padding-right: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; /* 내용이 길면 ...으로 표시 */
+	background-color: rgb(234, 240, 245);
+	padding: 10px;
+	border-radius: 5px;
+}
 
-.p-summary { background: #f0f6ff; padding: 10px; border-radius: 6px; font-size: 0.85rem; color: #004a99; margin-top: 10px; line-height: 1.4; }
+/* 화살표 위치 고정 */
+.arrow {
+	position: absolute;
+	right: 20px;
+	top: 25px;
+	transform: translateY(-50%);
+	font-size: 0.8rem;
+	color: #ccc;
+}
+.accordion-content {
+	display: none;
+	padding: 20px;
+	border-top: 1px solid #f9f9f9;
+	background: #fcfcfc;
+}
 
-/* 상담 신청 섹션 */
-.contact-area { margin-top: 30px; }
-.contact-box { background: white; padding: 30px 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
-.input-field { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; outline: none; transition: border 0.3s; }
-.input-field:focus { border-color: #004a99; }
+.p-tagline {
+	font-size: 0.95rem;
+	color: #d9534f;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.p-summary {
+	font-size: 0.9rem;
+	color: #555;
+	background: #eef3ff;
+	padding: 10px;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
 
-.btn-group { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
-.btn { padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; border: none; cursor: pointer; font-size: 1.05rem; color: white; display: block; }
+.p-body ul {
+	list-style: none;
+	padding: 0;
+}
+.p-body li {
+	font-size: 0.9rem;
+	color: #777;
+	margin-bottom: 12px;
+	line-height: 1.5;
+	position: relative;
+	padding-left: 5px;
+}
+.p-body strong {
+	color: #444;
+	display: block;
+	margin-bottom: 2px;
+}
 
-.call { background: #28a745; }
-.sms { background: #007bff; }
-.kakao { background: #fee500; color: #3c1e1e; }
+.info-title {
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+	font-size: 1rem;
+}
+.p-highlight {
+	margin-top: 15px;
+	padding-top: 10px;
+	border-top: 1px dashed #ccc;
+	color: #425d96;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
 
-footer { padding: 40px 0; text-align: center; font-size: 0.75rem; color: #aaa; }
+.cat-title {
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+	color: #425d96;
+	text-align: center;
+	font-family: "YeogiOttaeJalnan";
+}
+
+/* 상담 신청 */
+.contact-area {
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* 부드러운 움직임 */
+	position: relative;
+}
+.scroll-gradient {
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 100%;
+	height: 50px; /* 그라데이션 높이 */
+	background: linear-gradient(to top, #eff3fa, transparent);
+	pointer-events: none; /* 그라데이션이 버튼 클릭을 방해하지 않도록 설정 */
+}
+.contact-area.minimized {
+	opacity: 0.8;
+}
+.contact-area.minimized .contact-box {
+	padding: 10px 20px; /* 패딩을 대폭 줄임 */
+}
+.contact-area.minimized .input-field,
+.contact-area.minimized .btn-group {
+	display: none; /* 내용물 숨기기 */
+}
+.contact-box {
+	background: white;
+	padding: 25px;
+	border-radius: 15px 15px 0 0;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+.contact-box h3 {
+	margin-bottom: 15px;
+}
+.input-field {
+	width: 100%;
+	padding: 14px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
+.btn-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.btn {
+	padding: 10px;
+	border-radius: 8px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+.call {
+	background: #28a745;
+}
+.sms {
+	background: #007bff;
+}
+.kakao {
+	background: #fee500;
+	color: #3c1e1e;
+}
